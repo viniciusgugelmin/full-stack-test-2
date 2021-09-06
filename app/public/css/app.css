@@ -1,0 +1,35 @@
+html {
+  height: 100vh;
+}
+html body {
+  height: 100%;
+  margin: 0;
+}
+html body #app {
+  height: 100%;
+}
+
+.vkg-header {
+  position: sticky;
+  background: red;
+  height: 110px;
+  width: 100%;
+}
+html {
+  height: 100vh;
+}
+html body {
+  height: 100%;
+  margin: 0;
+}
+html body #app {
+  height: 100%;
+}
+
+.vkg-header {
+  position: sticky;
+  background: blue;
+  height: 110px;
+  width: 100%;
+}
+
