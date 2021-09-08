@@ -48,13 +48,18 @@ Route::prefix('admin')->namespace('Admin')->group(function () {
 
         /* Provider */
         //
+        // Index
+        Route::get('/', [ProvidersController::class, 'index']);
         // Create a provider
         Route::post('/', [ProvidersController::class, 'create']);
+        // Index email
+        Route::get('/email', [ProvidersController::class, 'indexEmail']);
 
         /* Hour */
         //
         // Create provider hours
-        Route::post('/{id}/hours', [ProvidersHoursController::class, 'create']);
-
+        Route::post('/hours', [ProvidersHoursController::class, 'create']);
+        // Get hours per period
+        Route::get('/hours', [ProvidersHoursController::class, 'index']);
     });
 });

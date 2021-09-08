@@ -15,7 +15,6 @@ class Hour extends Model
     ];
 
     protected $appends = [
-        'provider',
         'period_name'
     ];
 

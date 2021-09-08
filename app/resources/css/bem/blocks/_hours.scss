@@ -1,4 +1,4 @@
-.vkg-providers {
+.vkg-hours {
     display: flex;
     height: calc(100% - 100px);
 
@@ -30,7 +30,7 @@
             height: 105px;
         }
 
-        &-name {
+        &-email {
             width: 100%;
             padding: 5px;
             color: white;
@@ -57,7 +57,61 @@
             }
         }
 
-        &-email {
+        &-value {
+            width: 100%;
+            padding: 5px;
+            color: white;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            background: inherit;
+            border: 1px solid white;
+            transition: border, background 0.15s ease-in;
+            border-right: 1px solid $fourth-color;
+            border-top: 1px solid $fourth-color;
+            border-left: 1px solid $fourth-color;
+
+            &:focus-visible {
+                outline: inherit;
+                background: $second-color;
+                border-radius: 5px;
+                border: 1px solid white;
+            }
+
+            &-label {
+                color: white;
+                text-transform: uppercase;
+                font-size: 12px;
+            }
+        }
+
+        &-period {
+            width: 100%;
+            padding: 5px;
+            color: white;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            background: inherit;
+            border: 1px solid white;
+            transition: border, background 0.15s ease-in;
+            border-right: 1px solid $fourth-color;
+            border-top: 1px solid $fourth-color;
+            border-left: 1px solid $fourth-color;
+
+            &:focus-visible {
+                outline: inherit;
+                background: $second-color;
+                border-radius: 5px;
+                border: 1px solid white;
+            }
+
+            &-label {
+                color: white;
+                text-transform: uppercase;
+                font-size: 12px;
+            }
+        }
+
+        &-date {
             width: 100%;
             padding: 5px;
             color: white;
@@ -113,52 +167,31 @@
         }
     }
 
-    &__table {
-        border-radius: 5px;
-        background: $fourth-color;
-        min-width: 350px;
+    &__export {
         margin: auto;
-        box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12)!important;
-
-        &-header {
-            &-row {
-                border-bottom: 1px solid $third-color;
-                background: rgba(0, 0, 0, 0.16);
-
-                &-td {
-                    padding: 15px 20px;
-                    text-transform: uppercase;
-                    color: white;
-                }
-            }
-        }
-
-        &-body {
-            &-row {
-                border-bottom: 1px solid $third-color;
-
-                &:last-child {
-                    border-bottom: 0px;
-                    height: 50px;
-                    background: inherit !important;
-                }
-
-                &:hover {
-                    background: rgba(0, 0, 0, 0.07);
-                }
-
-                &-td {
-                    padding: 15px 20px;
-                    color: white;
-                }
-            }
-        }
 
         &-button {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 5px;
+            color: black !important;
+            border: 1px solid black;
+            padding: 10px;
+
+            &:hover {
+                background: gray;
+            }
         }
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+
+    ::-webkit-calendar-picker-indicator {
+        filter: invert(1);
     }
 }

@@ -11,6 +11,7 @@ class ProvidersHoursRequest extends BaseRequest
     {
         $this->merge([
             'date' => $this->input('date') ? Carbon::parse($this->input('date')) : null,
+            'value' => $this->input('value') ? (int)$this->input('value') : null
         ]);
     }
 
@@ -22,25 +23,29 @@ class ProvidersHoursRequest extends BaseRequest
     public function rules()
     {
         $rules = [
-            'value' => 'required|min:1|max:8',
+            'value' => 'required|gte:1|lte:8',
             'period' => 'required|in:morning,afternoon,night',
             'date' => 'required|date'
         ];
 
-        switch($this->method())
-        {
+        switch ($this->method()) {
             case 'GET':
             case 'DELETE':
-                {
-                    return [];
-                }
+            {
+                return [];
+            }
             case 'PATCH':
             case 'PUT':
             case 'POST':
-                {
-                    return $rules;
-                }
-            default: break;
+            {
+                $rules = array_merge($rules, [
+                    'email' => 'required|email:rfc,dns'
+                ]);
+
+                return $rules;
+            }
+            default:
+                break;
         }
         return null;
     }

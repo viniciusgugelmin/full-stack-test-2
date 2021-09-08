@@ -13,9 +13,9 @@
             <i class="fas fa-hourglass-half"></i>
             Hours
         </a>
-        <span class="vkg-header__navbar-item" href="{{route('hours')}}">
+        <a class="vkg-header__navbar-item" href="{{route('hours')}}">
             <i class="fas fa-sign-out-alt"></i>
             Logout
-        </span>
+        </a>
     </nav>
 </header>

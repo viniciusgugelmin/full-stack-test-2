@@ -1,4 +1,4 @@
-POST http://localhost:8000/api/admin/providers/
+POST http://localhost:8000/api/admin/providers
 Content-Type: application/json
 Accept: application/json
 

@@ -2,5 +2,5 @@
 @extends('components.header')
 
 @section('content')
-    teste
+
 @endsection
