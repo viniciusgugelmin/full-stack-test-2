@@ -1,0 +1,5 @@
+PUT http://localhost:8000/api/admin/user/verify-email
+Content-Type: application/json
+Accept: application/json
+
+

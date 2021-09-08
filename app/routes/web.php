@@ -13,20 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    // TODO auth()->user()
-    if (true) {
+Route::prefix('admin')->group(function () {
+    Route::get('/', function () {
         return view('pages.home');
-    }
+    })->name('home');
 
-    return view('pages.login');
-})->name('home');
+    Route::get('/hours', function () {
+        return view('pages.hours');
+    })->name('hours');
 
-Route::get('/hours', function () {
-    return view('pages.hours');
-})->name('hours');
+    Route::get('/providers', function () {
+        return view('pages.providers');
+    })->name('providers');
+});
 
-Route::get('/providers', function () {
-    return view('pages.providers');
-})->name('providers');
+Route::get('/', function () {
+    return redirect(route('home'));
+});
 

@@ -1,35 +1,57 @@
 html {
-  height: 100vh;
+  font-family: "Roboto", sans-serif;
 }
 html body {
-  height: 100%;
   margin: 0;
 }
-html body #app {
-  height: 100%;
-}
-
 .vkg-header {
+  top: 0;
   position: sticky;
-  background: red;
-  height: 110px;
+  background: #820B07;
+  height: 100px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+.vkg-header__project-name {
+  flex-grow: 1;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.vkg-header__project-name-box {
+  color: black;
+  text-decoration: none;
+  display: block;
   width: 100%;
+  max-width: 150px;
+  border-bottom: 2px solid black;
 }
-html {
-  height: 100vh;
+.vkg-header__project-name-box:after {
+  z-index: 0;
+  content: " ";
+  width: 80px;
+  height: 90%;
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #820B07 35%);
 }
-html body {
-  height: 100%;
-  margin: 0;
+.vkg-header__navbar {
+  flex-grow: 0;
+  margin-left: auto;
 }
-html body #app {
-  height: 100%;
+.vkg-header__navbar-item {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 10px;
+  margin: 0 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  transition: background 0.15s ease-in;
 }
-
-.vkg-header {
-  position: sticky;
-  background: blue;
-  height: 110px;
-  width: 100%;
+.vkg-header__navbar-item:hover {
+  background: rgba(0, 0, 0, 0.09);
 }
 

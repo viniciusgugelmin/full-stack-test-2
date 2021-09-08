@@ -1,0 +1,11 @@
+POST http://localhost:8000/api/admin/providers/1/hours
+Content-Type: application/json
+Accept: application/json
+
+{
+    "value": 5,
+    "period": "morning",
+    "date": "07-09-2021"
+}
+
+

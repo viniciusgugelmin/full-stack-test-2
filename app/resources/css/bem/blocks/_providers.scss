@@ -1,5 +1,80 @@
 .vkg-providers {
-    &__form {
+    display: flex;
+    height: calc(100% - 100px);
 
+    &__form {
+        display: flex;
+        flex-direction: column;
+        background: $fourth-color;
+        margin: auto;
+        padding: 20px 15px;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12)!important;
+
+        &-header {
+            position: sticky;
+            font-size: 18px;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 10px;
+            padding: 10px 0;
+            border-top-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            background: rgba(0, 0, 0, 0.13);
+            color: white;
+        }
+
+        &-name {
+            padding: 5px;
+            color: white;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            background: inherit;
+            border: 1px solid white;
+            transition: border, background 0.15s ease-in;
+            border-right: 1px solid $fourth-color;
+            border-top: 1px solid $fourth-color;
+            border-left: 1px solid $fourth-color;
+
+            &:focus-visible {
+                outline: inherit;
+                background: $second-color;
+                border-radius: 5px;
+                border: 1px solid white;
+            }
+
+            &-label {
+                color: white;
+                text-transform: uppercase;
+                font-size: 12px;
+            }
+        }
+
+        &-email {
+            padding: 5px;
+            color: white;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            background: inherit;
+            border: 1px solid white;
+            transition: border, background 0.15s ease-in;
+            border-right: 1px solid $fourth-color;
+            border-top: 1px solid $fourth-color;
+            border-left: 1px solid $fourth-color;
+
+            &:focus-visible {
+                outline: inherit;
+                background: $second-color;
+                border-radius: 5px;
+                border: 1px solid white;
+            }
+
+            &-label {
+                color: white;
+                text-transform: uppercase;
+                font-size: 12px;
+            }
+        }
     }
 }
